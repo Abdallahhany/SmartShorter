@@ -96,7 +96,7 @@ http://localhost:3000
 
 ## Credits
 
-This project was built by Abdallah Rashed as a demonstration of React skills.
+This project was built by Abdallah Rashed as a demonstration of Backend skills.
 
 
 
