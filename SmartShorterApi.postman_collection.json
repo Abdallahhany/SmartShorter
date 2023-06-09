@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "72ceb115-66c4-4437-b0f5-9a0be9be53d5",
+		"name": "SmartShorterApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14347275"
+	},
+	"item": [
+		{
+			"name": "short link",
+			"item": [
+				{
+					"name": "new short url",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ios\":{\n        \"primary\":\"\",\n        \"fallback\":\"www.facebook.com\"\n    },\n    \"android\":{\n        \"primary\":\"www.github.com\",\n        \"fallback\":\"www.linkedin.com\"\n    },\n    \"web\":\"www.youtube.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/shortlinks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"shortlinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all links",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/shortlinks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"shortlinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one link",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/shortlinks/a12ght",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"shortlinks",
+								"a12ght"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit short link",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ios\": {\n        \"primary\": \"www.google1.com\",\n        \"fallback\": \"www.facebook1.com\"\n    },\n    \"web\":\"www.youtube.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/shortlinks/a12ght",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"shortlinks",
+								"a12ght"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
